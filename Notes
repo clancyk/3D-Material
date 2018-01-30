@@ -1,0 +1,7 @@
+29/1/2018
+
+Today's Thoughts/Progress:
+Decided to focus on only 7 properties since they have the most information on all materials. This eliminates my colour problem 
+(no longer need to figure out how to apply the colourmap to each material - but should for future). But I need to figure out
+how to then only ask for those columns in dataframe. This shouldn't be too hard but I just need to remember the syntax.
+
