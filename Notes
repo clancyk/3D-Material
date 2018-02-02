@@ -14,3 +14,7 @@ is and it is all the information for that one row. Hence I have called the wrong
 column, which now writing it out makes sense! I want all the rows in the first column). data[0] is not right either ;) For 
 calling a column you need to use the column label, so data['Company'] in this case. I got the same error "'str' object is not 
 callable", so maybe this iteration is not allowed.
+Fixed that previous problem by just creating the list (0-52) another way: yticks = [0]+[1]*52
+
+New thing: why does ys have two instances of NAN for the hardness values if I've changed the data frame to replace all
+instances of NAN to 0? Is that what is wrong? 
