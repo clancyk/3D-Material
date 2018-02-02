@@ -5,3 +5,12 @@ Decided to focus on only 7 properties since they have the most information on al
 (no longer need to figure out how to apply the colourmap to each material - but should for future). But I need to figure out
 how to then only ask for those columns in dataframe. This shouldn't be too hard but I just need to remember the syntax.
 
+1/2/2018
+
+I think the problem is that the 'yticks' is not a list (and instead changed it to be an array). I need to remember how to make
+a list comprehension to call the information in the dataframe. I have remembered how to call the rows of a dataframe but got
+the error "'str' object is not callable" when used: yticks = [num(0) for num in data.iloc[0]]. I looked up what data.iloc[0] 
+is and it is all the information for that one row. Hence I have called the wrong thing (called the first row instead of first
+column, which now writing it out makes sense! I want all the rows in the first column). data[0] is not right either ;) For 
+calling a column you need to use the column label, so data['Company'] in this case. I got the same error "'str' object is not 
+callable", so maybe this iteration is not allowed.
