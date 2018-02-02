@@ -21,3 +21,6 @@ instances of NAN to 0? Is that what is wrong?
 YES! The 'ys' was calling the wrong column name for the hardness values! There was a space in the Excel file that wasn't there
 when being called and therefore was giving the error. 
 
+Figure was produced. This only has 2 data rows plotted and the xticks/yticks are all squished. Will need to next see why that 
+happening!
+
