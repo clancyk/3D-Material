@@ -18,3 +18,6 @@ Fixed that previous problem by just creating the list (0-52) another way: yticks
 
 New thing: why does ys have two instances of NAN for the hardness values if I've changed the data frame to replace all
 instances of NAN to 0? Is that what is wrong? 
+YES! The 'ys' was calling the wrong column name for the hardness values! There was a space in the Excel file that wasn't there
+when being called and therefore was giving the error. 
+
