@@ -1,3 +1,5 @@
+Notes and ramblings to myself.
+
 29/1/2018
 
 Today's Thoughts/Progress:
@@ -23,4 +25,28 @@ when being called and therefore was giving the error.
 
 Figure was produced. This only has 2 data rows plotted and the xticks/yticks are all squished. Will need to next see why that 
 happening!
+
+11/2/2018
+
+And I'm back! Okay so today working on why the figure is only printing out 2 materials instead of all of them.
+
+All the material properties seem to be displaying correctly. There are 8, just like I wanted and all the values seem to 
+correspond correctly to how high they should be (it isn't a good graph for comparison really but will work on that later!)
+
+The 2 materials plotted are not material 1 and 2 in the excel document based on the plotted values. Figured it out! I forgot
+my BEDMAS, yticks = [0]+[1]*52 will plot [0] and [52]. Actually, looking at yticks it is [0,1,1,1,1,1....etc]. So it was 
+making 52 instances of [1] and then adding this to [0]. So it should have plotted row #2 several times. Why didn't it?
+
+Also remembered simple range function to create lists so yticks = range(0,53). But this gives me an error when try to run the
+program.
+ValueError: could not convert string to float: 'no break'
+Ah ha! So in python 3 they changed the range function a bit, and the yticks was a 'range' type instead of a list. 
+Info from Stackoverflow:
+- range(0,3) returns a class of immutable iterable objects that lets you iterate over them, it does not produce lists, and they 
+  do not store all the elements in the range in memory, instead they produce the elements on the fly (as you are iterating over 
+  them) , whereas list(range(0,3)) produces a list (by iterating over all the elements and appending to the list internally).
+Okay so changing yticks to a list didn't solve the problem. Need to understand error more.
+Library kicking me out! I am looked at the yticks 'list' and it is outputting as like one column. I am not sure if this is 
+the problem. Next time look up how to transpose/alter the list and see if it is the problem. The error is talking about zs
+which comes from k, derived from yticks to it must do with yticks.
 
