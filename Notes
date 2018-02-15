@@ -50,3 +50,16 @@ Library kicking me out! I am looked at the yticks 'list' and it is outputting as
 the problem. Next time look up how to transpose/alter the list and see if it is the problem. The error is talking about zs
 which comes from k, derived from yticks to it must do with yticks.
 
+15/2/2018
+
+Found it! In the original excel file one of the materials had 'no break' as the value instead of a numerical value!! Wow, okay,
+lesson learned: check ALL the variables to see what is in them and could be causing the error next time.
+
+Now it is working :) But my graph is all squished/all the data is not plotted since there is no space. Now to figure out how
+to change the plotting area.
+
+Figured out how to change the plot sizing, but that isn't the problem. The problem is that ys is only getting the values for 8
+materials (I think since there are only 8 material properties and in my loop ys is populated by the number of colours). The 
+example plot had more properties than materials so this wasn't an issue in their code. My next thing then is to see how I can
+fix this.
+
