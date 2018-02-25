@@ -63,3 +63,16 @@ materials (I think since there are only 8 material properties and in my loop ys 
 example plot had more properties than materials so this wasn't an issue in their code. My next thing then is to see how I can
 fix this.
 
+25/2/2018
+
+Figured out the problem with the loop. It wass stopping at 8 because I only had specified 8 colours (and the loop was based off
+the yticks and the colours). Yay! So another thing figured out.
+
+I know have the 3D map, however it still is not displaying the information well. There are so many materials that it is hard to
+distinguish between their values using this graph.
+
+This post has some info on possible way to change the 3D axes: 
+http://comments.gmane.org/gmane.comp.python.matplotlib.general/27415
+
+May look at this or another possible way of looking at all of these. Maybe should do spiderplots of each material and then
+put each material into different categories based on the shape of the spider plot.
